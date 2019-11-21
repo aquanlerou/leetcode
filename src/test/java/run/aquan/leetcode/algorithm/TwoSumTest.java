@@ -22,4 +22,15 @@ public class TwoSumTest {
         }
     }
 
+    @Test
+    public void TestHash() {
+        int[] nums = {2, 15, 11, 7, 3};
+        int target = 9;
+        TwoSum twoSum = new TwoSum();
+        int[] resultArray = twoSum.twoSumHash(nums, target);
+        for (int i: resultArray) {
+            System.out.print(i + ",");
+        }
+    }
+
 }
