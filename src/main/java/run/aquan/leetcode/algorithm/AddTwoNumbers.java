@@ -12,6 +12,7 @@ import run.aquan.leetcode.algorithm.base.ListNode;
 public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // ListNode.builder().val(2).next(null).build();
         return null;
     }
 
