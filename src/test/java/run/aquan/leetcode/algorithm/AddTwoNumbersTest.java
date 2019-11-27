@@ -13,9 +13,8 @@ public class AddTwoNumbersTest {
 
     @Test
     public void Test() {
-        ListNode listNode = new ListNode(0);
+
+        System.out.println("prev");
     }
 
-
 }
-

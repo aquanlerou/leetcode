@@ -13,6 +13,15 @@ public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // ListNode.builder().val(2).next(null).build();
+        String a = null;
+        while (l1.getNext() != null) {
+            
+        }
+        // if (l1 != null || l2 != null) {
+        //     Integer x = l1 == null ? 0 : l1.getVal();
+        //     Integer y = l2 == null ? 0 : l2.getVal();
+        //
+        // }
         return null;
     }
 

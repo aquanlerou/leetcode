@@ -1,6 +1,6 @@
 package run.aquan.leetcode.algorithm.base;
 
-import lombok.Builder;
+import lombok.Data;
 
 /**
  * @Class ListNode
@@ -9,7 +9,7 @@ import lombok.Builder;
  * @Date 2019/11/25 10:45
  * @Version 1.0
  **/
-@Builder
+@Data
 public class ListNode {
 
     int val;
