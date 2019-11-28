@@ -1,6 +1,6 @@
 package run.aquan.leetcode.algorithm;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import run.aquan.leetcode.algorithm.base.ListNode;
 
 /**

@@ -1,6 +1,6 @@
 package run.aquan.leetcode.algorithm;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * @Class TwoSumTest
