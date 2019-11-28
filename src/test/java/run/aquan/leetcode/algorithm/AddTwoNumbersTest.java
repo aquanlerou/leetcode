@@ -13,8 +13,15 @@ public class AddTwoNumbersTest {
 
     @Test
     public void Test() {
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
+        ListNode l3 = new ListNode(3);
 
-        System.out.println("prev");
+        l1.setNext(l2);
+        l2.setNext(l3);
+
+        // ListNode temp = l1;
+        AddTwoNumbers.addTwoNumbers(l1, l1);
     }
 
 }

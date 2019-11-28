@@ -1,5 +1,6 @@
 package run.aquan.leetcode.algorithm;
 
+import org.springframework.util.StringUtils;
 import run.aquan.leetcode.algorithm.base.ListNode;
 
 /**
@@ -11,18 +12,23 @@ import run.aquan.leetcode.algorithm.base.ListNode;
  **/
 public class AddTwoNumbers {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // ListNode.builder().val(2).next(null).build();
-        String a = null;
-        while (l1.getNext() != null) {
-            
-        }
-        // if (l1 != null || l2 != null) {
-        //     Integer x = l1 == null ? 0 : l1.getVal();
-        //     Integer y = l2 == null ? 0 : l2.getVal();
-        //
-        // }
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        int a = Integer.parseInt(convertTo(l1).toString());
+        int b = Integer.parseInt(convertTo(l2).toString());
+        System.out.println(a + "+" + b + "=" + (a+b) );
         return null;
     }
+
+    private static StringBuilder convertTo(ListNode listNode) {
+        StringBuilder stringBuilder = new StringBuilder();
+        while (listNode.getNext() != null || !StringUtils.isEmpty(String.valueOf(listNode.getVal()))) {
+            // System.out.println(listNode.getVal());
+            stringBuilder.insert(0, listNode.getVal());
+            listNode = listNode.getNext();
+            if (listNode == null) break;
+        }
+        return stringBuilder;
+    }
+
 
 }
