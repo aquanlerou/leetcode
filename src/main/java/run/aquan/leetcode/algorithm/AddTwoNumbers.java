@@ -45,7 +45,7 @@ public class AddTwoNumbers {
         return stringBuilder;
     }
 
-    public static String convertToString(ListNode listNode) {
+    private static String convertToString(ListNode listNode) {
         String s = new String();
         while (listNode.getNext() != null || (String.valueOf(listNode.getVal()) != null && !"".equals(String.valueOf(listNode.getVal()).trim())) ) {
             s = listNode.getVal() + s;
