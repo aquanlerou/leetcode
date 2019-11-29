@@ -13,15 +13,30 @@ public class AddTwoNumbersTest {
 
     @Test
     public void Test() {
-        ListNode l1 = new ListNode(1);
-        ListNode l2 = new ListNode(2);
-        ListNode l3 = new ListNode(3);
+        ListNode l1 = new ListNode(9);
 
-        l1.setNext(l2);
+        ListNode l2 = new ListNode(1);
+        ListNode l3 = new ListNode(9);
+        ListNode l4 = new ListNode(9);
+        ListNode l5 = new ListNode(9);
+        ListNode l6 = new ListNode(9);
+        ListNode l7 = new ListNode(9);
+        ListNode l8 = new ListNode(9);
+        ListNode l9 = new ListNode(9);
+        ListNode l10 = new ListNode(9);
+
         l2.setNext(l3);
+        l3.setNext(l4);
+        l4.setNext(l5);
+        l5.setNext(l6);
+        l6.setNext(l7);
+        l7.setNext(l8);
+        l8.setNext(l9);
+        l9.setNext(l10);
 
         // ListNode temp = l1;
-        AddTwoNumbers.addTwoNumbers(l1, l1);
+        ListNode listNode = AddTwoNumbers.addTwoNumbers(l1, l2);
+        System.out.println(listNode.toString());
     }
 
 }
