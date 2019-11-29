@@ -2,9 +2,8 @@ package run.aquan.leetcode.algorithm;
 
 import org.apache.commons.lang3.StringUtils;
 import run.aquan.leetcode.algorithm.base.ListNode;
-import java.lang.StringBuilder;
 
-import java.util.List;
+import java.math.BigDecimal;
 
 /**
  * @Class AddTwoNumbers
@@ -16,27 +15,16 @@ import java.util.List;
 public class AddTwoNumbers {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // int a = Integer.parseInt(convertTo(l1).toString());
-        // int b = Integer.parseInt(convertTo(l2).toString());
-        Integer a = Integer.parseInt(convertToString(l1));
-        Integer b = Integer.parseInt(convertToString(l2));
-        Integer c = a + b;
+        BigDecimal a = new BigDecimal(convertToString(l1).trim());
+        BigDecimal b = new BigDecimal(convertToString(l2).trim());
+        BigDecimal c = a.add(b);
         String s = c.toString();
-        // StringBuilder sb = new StringBuilder();
-        // for (int i=s.length()-1; i>=0; i--) {
-        //     char c1 = s.charAt(i);
-        //     sb.append(c1);
-        // }
-        // char[] arr = sb.toString().toCharArray();
-
         String nodeString = new String();
         for (int i=s.length()-1; i>=0; i--) {
             char c1 = s.charAt(i);
             nodeString = nodeString + c1;
         }
         char[] arr = nodeString.toCharArray();
-
-
         ListNode listNode = new ListNode(Integer.parseInt(String.valueOf(arr[0])));
         ListNode temp = listNode;
         for (int j=1; j<arr.length; j++) {

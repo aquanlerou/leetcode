@@ -1,5 +1,6 @@
 package run.aquan.leetcode.algorithm;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import run.aquan.leetcode.algorithm.base.ListNode;
 
@@ -9,6 +10,7 @@ import run.aquan.leetcode.algorithm.base.ListNode;
  * @Author Aquang
  * @Version 1.0
  **/
+@Slf4j
 public class AddTwoNumbersTest {
 
     @Test
@@ -24,6 +26,7 @@ public class AddTwoNumbersTest {
         ListNode l8 = new ListNode(9);
         ListNode l9 = new ListNode(9);
         ListNode l10 = new ListNode(9);
+        ListNode l11 = new ListNode(9);
 
         l2.setNext(l3);
         l3.setNext(l4);
@@ -33,10 +36,11 @@ public class AddTwoNumbersTest {
         l7.setNext(l8);
         l8.setNext(l9);
         l9.setNext(l10);
+        l10.setNext(l11);
 
         // ListNode temp = l1;
         ListNode listNode = AddTwoNumbers.addTwoNumbers(l1, l2);
-        System.out.println(listNode.toString());
+        log.warn(listNode.toString());
     }
 
 }
