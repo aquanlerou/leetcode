@@ -1,8 +1,11 @@
 package run.aquan.leetcode.algorithm;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import run.aquan.leetcode.algorithm.base.ListNode;
+
+import java.util.List;
 
 /**
  * @Class AddTwoNumbersTest
@@ -38,8 +41,19 @@ public class AddTwoNumbersTest {
         l9.setNext(l10);
         l10.setNext(l11);
 
-        // ListNode temp = l1;
-        ListNode listNode = AddTwoNumbers.addTwoNumbers(l1, l2);
+        // 解法一
+        // ListNode listNode = AddTwoNumbers.addTwoNumbers(l1, l2);
+        // 解法二
+        ListNode listNode = AddTwoNumbers.addTwoNumbersTwo(l1, l2);
+        System.out.println(StringUtils.isNotBlank(String.valueOf(listNode.getVal()).trim()));
+        try {
+            while (listNode.getNext() != null || !StringUtils.isEmpty(String.valueOf(listNode.getVal()))) {
+                System.out.print(listNode.getVal());
+                listNode = listNode.getNext();
+            }
+        } catch (NullPointerException e) {
+            log.error(e.getMessage());
+        }
         log.warn(listNode.toString());
     }
 

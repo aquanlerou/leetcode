@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import run.aquan.leetcode.algorithm.base.ListNode;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @Class AddTwoNumbers
@@ -14,6 +15,7 @@ import java.math.BigDecimal;
  **/
 public class AddTwoNumbers {
 
+    // TODO: 2019/11/29 解法一：CTO见打法
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         BigDecimal a = new BigDecimal(convertToString(l1).trim());
         BigDecimal b = new BigDecimal(convertToString(l2).trim());
@@ -54,6 +56,29 @@ public class AddTwoNumbers {
         }
         return s;
     }
+
+    // TODO: 2019/12/2 解法二
+    public static ListNode addTwoNumbersTwo(ListNode l1, ListNode l2) {
+        ListNode temp = null;
+        ListNode a = l1;
+        ListNode b = l2;
+        Integer carry = 0;// 用于计算进位标记
+        while (a!=null || b!=null) {
+            Integer val = (a==null ? 0:a.getVal()) + (b==null ? 0:b.getVal()) + carry;
+            carry = val>=10 ? 1:0;
+            val = val % 10;
+            temp = (a==null ? b:a);
+            temp.setVal(val);
+            a = (a==null ? null:a.getNext());
+            b = (b==null ? null:b.getNext());
+            temp.setNext(a==null ? b:a);
+        }
+        if (carry > 0) {
+            temp.setNext(new ListNode(1));
+        }
+        return l1;
+    }
+
 
 
 }
