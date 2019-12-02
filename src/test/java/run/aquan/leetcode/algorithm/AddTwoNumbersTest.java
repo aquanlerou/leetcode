@@ -5,11 +5,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import run.aquan.leetcode.algorithm.base.ListNode;
 
-import java.util.List;
-
 /**
  * @Class AddTwoNumbersTest
- * @Description TODO
+ * @Description TODO 两数相加测试类
  * @Author Aquang
  * @Version 1.0
  **/

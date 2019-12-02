@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import run.aquan.leetcode.algorithm.base.ListNode;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * @Class AddTwoNumbers
