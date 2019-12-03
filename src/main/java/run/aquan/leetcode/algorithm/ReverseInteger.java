@@ -14,9 +14,8 @@ import java.math.BigDecimal;
 @Slf4j
 public class ReverseInteger {
 
-    // 正常解法 判断是否溢出
-
     /**
+     * 正常解法 判断是否溢出
      * TODO 注意点: 1.如果 temp = rev * 10 + pop 导致溢出,那么一定会有 rev >= (Integer.MAX_VALUE / 10)
      *             2.如果 rev > (Integer.MAX_VALUE / 10),那么 temp = rev * 10 + pop 一定会溢出
      *             3.如果 rev == (Integer.MAX_VALUE / 10),那么只要 pop > 7,temp = rev * 10 + pop 就会溢出
