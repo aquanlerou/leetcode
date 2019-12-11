@@ -17,7 +17,7 @@ public class RomanToIntegerTest {
 
     @Test
     public void Test() {
-        int result = RomanToInteger.romanToInt("III");
+        int result = RomanToInteger.romanToInt("MCMXCVII");
         log.warn("result:" + result);
     }
 
