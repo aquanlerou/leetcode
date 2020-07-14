@@ -16,9 +16,13 @@ public class ReverseIntegerTest {
     @Test
     public void Test() {
         // int i = (int) (Math.pow(2, 31)); //2147483647
-        int i = -2147483647;
+        int i = 12345;
         int reverse = ReverseInteger.reverseTwo(i);
         log.warn(String.valueOf(reverse));
+
+        int s = 12345 % 10;
+
+        log.info(String.valueOf(s));
 
     }
 
